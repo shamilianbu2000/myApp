@@ -1,1 +1,24 @@
-<p>footer works!</p>
+
+<div>
+    <div>
+        <div>
+            <input type="text" (keyup)="keyPress($event)" > 
+            <p>{{a}} </p><!--first text box------>
+
+        <button [disabled]="isDisabled" (click)="myButton($event)">click it</button> <!--disable check-->
+        </div>
+        <div>
+
+            <!--------------------task one--->
+            <p>task one</p>
+            <input type="text" (keyup)="data($event)" [(ngModel)] = "twoWayBinding" > 
+
+            <p>{{twoWayBinding}}</p>
+
+           <button [disabled] = "isEnable" (click)="enable()">clear</button><!---twowaycheck-->
+        </div>
+        
+    </div>
+   
+       
+</div>

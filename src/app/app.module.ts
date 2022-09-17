@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { SlidebarComponent } from './slidebar/slidebar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,10 +17,17 @@ import { FooterComponent } from './footer/footer.component';
     SlidebarComponent,
     FooterComponent
   ],
+
+ 
+  
+  
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

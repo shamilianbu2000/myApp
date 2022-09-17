@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  title:any = "contoller------>view"
+
+  myButton(event:any){
+    console.log("view------------->controler",event);
+    
+  }
+
 
   constructor() { }
 
