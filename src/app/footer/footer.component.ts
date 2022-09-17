@@ -34,6 +34,7 @@ export class FooterComponent implements OnInit {
     this.isEnable = true
   }
 
+//disable button 
   myButton(event:any){
     console.log("hi",event);
     this.isDisabled = true
