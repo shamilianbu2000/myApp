@@ -19,18 +19,10 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  myButton(event:any){
-    console.log("hi",event);
-    this.isDisabled = true
-  }
-  keyPress(events:any){
-     console.log(events.target.value);
-     this.a=events.target.value
-     
-     
-  }
-   ////two way controller<------------->view
-  data(event : any){
+
+
+   ////two way controller<------------->view(task one)
+   data(event : any){
     if(event.target.value){
       this.isEnable = false
       return;
@@ -41,6 +33,18 @@ export class FooterComponent implements OnInit {
     this.twoWayBinding = ""
     this.isEnable = true
   }
+
+  myButton(event:any){
+    console.log("hi",event);
+    this.isDisabled = true
+  }
+  keyPress(events:any){
+     console.log(events.target.value);
+     this.a=events.target.value
+     
+     
+  }
+  
 }
 
 
