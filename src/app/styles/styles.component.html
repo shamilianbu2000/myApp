@@ -1,45 +1,17 @@
-<h3 [ngStyle]="{ 'font-size': '30px' }">Directives</h3>
+
 
 <div>
-    <p [ngClass]="'paraStyle'">Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.
-        Doloribus, consequuntur. Et, possimus! Laudantium similique,
-        et laborum itaque quam cum est ipsa consequatur ipsam quisquam harum fuga a? Quasi,
-        nostrum sed.</p>
+    <p [ngClass]="'frdz'"> friends</p>  <!---attribute directive-->
 </div>
 <div>
     <ul>
-        <li [ngClass]="'listView'" *ngFor="let city of cities ; index as i">{{i+1}} . {{city}}</li>
+        <li  *ngFor="let name of names ; index as i">{{i+1}}  {{name}}</li>
     </ul>
 </div>
 <div>
-    <button (click)="isActive = !isActive">ElsePart</button>
-    <p *ngIf="isActive; else elsePart">Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.
-        Doloribus, consequuntur. Et, possimus! Laudantium similique,
-        et laborum itaque quam cum est ipsa consequatur ipsam quisquam harum fuga a? Quasi,
-        nostrum sed.</p>
-    <ng-template #elsePart> This is Else Part</ng-template>
+    <button (click)="isActive = !isActive">check</button>
+    <p *ngIf="isActive; else hi">hi</p>
+    <ng-template #hi> else part work it</ng-template>
 </div>
 
-<div>
-    <p [ngClass]="'paraStyle'">Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.
-        Doloribus, consequuntur. Et, possimus! Laudantium similique,
-        et laborum itaque quam cum est ipsa consequatur ipsam quisquam harum fuga a? Quasi,
-        nostrum sed.</p>
-</div>
-<div>
-    <ul>
-        <li [ngClass]="'listView'" *ngFor="let city of cities ; index as i">{{i+1}} . {{city}}</li>
-    </ul>
-</div>
-<div>
-    <button (click)="isActive = !isActive">ElsePart</button>
-    <p *ngIf="isActive; else elsePart">Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.
-        Doloribus, consequuntur. Et, possimus! Laudantium similique,
-        et laborum itaque quam cum est ipsa consequatur ipsam quisquam harum fuga a? Quasi,
-        nostrum sed.</p>
-    <ng-template #elsePart> This is Else Part</ng-template>
-</div>
+
