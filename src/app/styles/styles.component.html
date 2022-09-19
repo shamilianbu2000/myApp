@@ -2,6 +2,9 @@
 
 <div>
     <p [ngClass]="'frdz'"> friends</p>  <!---attribute directive-->
+    <span (click)="isChange = !isChange" [ngClass]="isChange?'yes':'no'"> COLORCHANGE</span>
+    <span *ngIf = "isChange;else colorChange">green</span>
+    <ng-template #colorChange>RED</ng-template>
 </div>
 <div>
     <ul>
@@ -10,8 +13,11 @@
 </div>
 <div>
     <button (click)="isActive = !isActive">check</button>
-    <p *ngIf="isActive; else hi">hi</p>
+    <span *ngIf="isActive; else hi">hi</span>
     <ng-template #hi> else part work it</ng-template>
 </div>
+
+
+
 
 
