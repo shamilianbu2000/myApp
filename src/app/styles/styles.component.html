@@ -9,6 +9,12 @@
 <div>
     <ul>
         <li  *ngFor="let name of names ; index as i">{{i+1}}  {{name}}</li>
+        <span> {{list|json}}</span> 
+        <span> {{list[0].name}}</span> 
+        <span> {{ names[0]}}</span>
+        <li  *ngFor="let i of list; index as j " >{{j+1}}   {{i.name}} </li>
+        
+      
     </ul>
 </div>
 <div>

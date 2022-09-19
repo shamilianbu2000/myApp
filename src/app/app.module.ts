@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from "@angular/forms";
 import { StylesComponent } from './styles/styles.component';
 import { ServeComponent } from './serve/serve.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ServeComponent } from './serve/serve.component';
     SlidebarComponent,
     FooterComponent,
     StylesComponent,
-    ServeComponent
+    ServeComponent,
+    ChildComponent
   ],
 
  

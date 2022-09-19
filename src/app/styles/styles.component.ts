@@ -13,7 +13,7 @@ export class StylesComponent implements OnInit {
   isActive : boolean = true;
   isChange : boolean = true;
   names = ['meena','aki','surya']
-  list:object = [{'id':1,name:"developer"},{id:2,name:"programer"}]
+  list = [{'id':1,name:"developer"},{id:2,name:"programer"}]
   ngOnInit(): void {
   }
 
