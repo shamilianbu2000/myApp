@@ -9,7 +9,7 @@ export class FooterComponent implements OnInit {
   a:any
   isDisabled:boolean= false
   twoWayBinding : any;
-  
+  styles:object =  {'font-size': '40px','color' : 'green'}; 
   isEnable : boolean = true
  
 
@@ -47,6 +47,7 @@ export class FooterComponent implements OnInit {
   }
   
 }
+
 
 
 

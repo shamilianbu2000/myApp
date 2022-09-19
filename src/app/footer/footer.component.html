@@ -13,10 +13,20 @@
             <p>Task one</p>
             <input type="text" (keyup)="data($event)" [(ngModel)] = "twoWayBinding" > 
 
-            <p>{{twoWayBinding}}</p>
+            <p [ngStyle]="styles">{{twoWayBinding}} </p>   
 
            <button [disabled] = "isEnable" (click)="enable()">clear</button><!---twowaycheck-->
+
+           <button [ngClass]="isEnable?'':'buttonChange'" [disabled] = "isEnable" (click)="enable()">Clear!</button>
+
+           
+               
+            
         </div>
+       
+          
+            
+    
         
     </div>
    
