@@ -1,0 +1,16 @@
+
+
+
+<div class="user">
+    <p>{{userIndex}}</p>
+    <div class="profile-pic">
+        <img [src]="userDetail.avatar" alt="">
+    </div>
+    <div class="user-details">
+        <p class="user-name"> {{userDetail.first_name}} {{userDetail.last_name}} </p>
+        <p class="user-email">{{userDetail.email}}</p>
+    </div>
+    <div class="button">
+        <span class="remove-user" (click)="removeUser()">Remove User</span>
+    </div>
+</div>

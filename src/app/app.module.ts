@@ -9,9 +9,11 @@ import { SlidebarComponent } from './slidebar/slidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from "@angular/forms";
 import { StylesComponent } from './styles/styles.component';
-import { ServeComponent } from './serve/serve.component';
-import { ChildComponent } from './child/child.component';
 
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UsersDetailComponent } from './users-detail/users-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +22,10 @@ import { ChildComponent } from './child/child.component';
     SlidebarComponent,
     FooterComponent,
     StylesComponent,
-    ServeComponent,
-    ChildComponent
+    ChildComponent,
+    ParentComponent,
+    UsersListComponent,
+    UsersDetailComponent,
   ],
 
  

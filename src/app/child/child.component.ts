@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input,EventEmitter, OnInit,Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-
+  @Input() user:any;
+  newUser=''
+ @Output() addNewUser = new EventEmitter();
   constructor() { }
+  
 
   ngOnInit(): void {
+    console.log(`---------------->`,this.user)
   }
+  ngOnChanges(){
+    console.log(`user updated-------------------->`,this.user)
+  }
+
+
+
+  addUser(){
+    this.addNewUser.emit(this.newUser)
+
+}
 
 }

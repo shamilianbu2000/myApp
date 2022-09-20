@@ -1,0 +1,11 @@
+
+
+
+
+<ng-container *ngFor="let j of usersList,index as i">
+    <app-users-detail [userDetail]="j" [userIndex]="i" (removeUserEvent)="userRemoved($event)"></app-users-detail>
+</ng-container>
+
+<!-- <ng-container *ngFor ="let  output of usersList,index as i">
+    <app-users-detail [userDetail] = "output" [userIndex]="i"></app-users-detail>
+</ng-container> -->
