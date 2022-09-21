@@ -14,6 +14,9 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UsersDetailComponent } from './users-detail/users-detail.component';
+import { ToHeaderComponent } from './to-header/to-header.component';
+import { InputfieldComponent } from './inputfield/inputfield.component';
+import { ListviewComponent } from './listview/listview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +29,9 @@ import { UsersDetailComponent } from './users-detail/users-detail.component';
     ParentComponent,
     UsersListComponent,
     UsersDetailComponent,
+    ToHeaderComponent,
+    InputfieldComponent,
+    ListviewComponent,
   ],
 
  

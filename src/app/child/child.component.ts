@@ -6,8 +6,9 @@ import { Component,Input,EventEmitter, OnInit,Output } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-  @Input() user:any;
+  @Input() user: any;
   newUser=''
+  @Input() afterPush:any;
  @Output() addNewUser = new EventEmitter();
   constructor() { }
   

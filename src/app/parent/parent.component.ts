@@ -9,23 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
   userDetails = {userId : 1,userName:"priya"}
   childToparent= ['user 1','user 2']
+   a:any;
   
   constructor() { }
 
   ngOnInit(): void {
+    
   }
  
  
-  dToparent= ['user 1','user 2']
-  // changeUserDetails(){
-    
-  //   this.userDetails = {userId:2,userName:'New User 2'}
-  // } event = "event"
+
 
   newUserEmitted(event:any){
     this. childToparent.push(event)
      let a = this.childToparent
-     console.log(child);
+     console.log(a);
+     
+     
      
   }
 

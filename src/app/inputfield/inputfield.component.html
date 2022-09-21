@@ -1,0 +1,16 @@
+
+
+
+
+
+<div class="inputField">
+    <label for="tasks">Enter Your Task</label><br>
+    <input type="text" name ="task" [(ngModel)]="NewTask">
+    <button type="button" (click)="add()">Submit</button>
+</div>
+
+<ng-container *ngFor="let task of taskList">
+  <app-listview [passvalue]="task"></app-listview>
+</ng-container>
+
+

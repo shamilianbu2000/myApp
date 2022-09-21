@@ -1,6 +1,11 @@
+<div>
+    <input type="text" [(ngModel)]="newUser">
+    <button (click)="addUser()">Add User</button>
+</div>
+<div>
+    <span>User ID  : {{user.userId }}</span>
+    <span>User Name : {{user.userName}}</span>
+    <p>{{afterPush}}</p>
+</div>
 
-<input type="text" [(ngModel)]="newUser">
-<button (click)="addUser()">Add User</button>
 
-<p>User ID  : {{user.userId }}</p>
-<p>User Name : {{user.userName}}</p>
