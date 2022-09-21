@@ -1,0 +1,43 @@
+.hole{
+    font-family:'Times New Roman', Times, serif ;
+    font-size: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border: 5px solid rgb(38, 14, 60);
+    margin: 0 350px;
+    text-align: center;
+    height: 100%;
+    
+    
+}
+
+.head{
+    
+   display: flex;
+   color: rgb(14, 8, 98);
+   align-items: center;
+   background-color: rgb(24, 137, 181);
+   font-size: 40px;
+   
+   
+   
+}
+.inputField{
+    color: rgb(203, 12, 177);  
+
+}
+
+#input{
+    height: 30px;
+    width: 50%;
+}
+#button{
+    height: 30px;
+    width: 5%;
+    color: rgb(14, 8, 98);
+    background-color: skyblue;
+    font-weight: 100px;
+    
+    
+}

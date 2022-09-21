@@ -1,7 +1,19 @@
+.list{
+    font-family:'Times New Roman', Times, serif ;
+    font-size: 20px;
+    display: flex;
+   
+    justify-content: center;
+    border: 5px solid rgb(38, 14, 60);
+    margin: 0 350px;
+ 
+     
+}
+
 .isActive{
-color: greenyellow;
+color: violet;
 }
 .inActive{
-color: violet;
+color: rgb(120, 161, 215);
 text-decoration: line-through;
 }

@@ -1,7 +1,8 @@
 
-
-<ul>
-    <li [ngClass]="isActive?'isActive':'inActive'"  >
-       <input type="checkbox"  class="check" (click)="check($event)"  >{{value}}
-    </li>
-</ul>
+<div class="list">
+    <ul
+         [ngClass]="isActive?'isActive':'inActive'"  >
+           <input type="checkbox"  class="check" (click)="check($event)"  >{{value}}
+        
+    </ul>
+</div>

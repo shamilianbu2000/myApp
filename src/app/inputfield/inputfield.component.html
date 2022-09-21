@@ -1,14 +1,16 @@
 
+<div class="hole">
+  <div class="head">To do List</div>
 
-
-<div><p>To do List</p></div>
-
-<div class="inputField">
-
-    <label for=" ">Enter Your Task</label><br>
-    <input type="text" name ="task" [(ngModel)]="NewTask">
-    <button type="button" (click)="add()">add</button>
+  <div class="inputField">
+  
+      <label for=" ">Enter Your Task</label><br>&nbsp;
+      <input type="text" id="input"name ="task" placeholder="add your task" [(ngModel)]="NewTask">
+      <button type="button"  [disabled]="!NewTask"   id = "button"(click)="add()">ADD</button>
+  </div>
 </div>
+
+
 
 <!-- <ng-container *ngFor="let task of taskList"> 
   <app-listview [passvalue]="task"></app-listview>
