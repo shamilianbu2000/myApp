@@ -1,6 +1,12 @@
 
-<ul>
-    <li>
-        {{passvalue}}
+<!-- <ul>
+    <li [ngClass]="isActive?'isActive':'inActive'"  >
+       <input type="checkbox"  class="check" (click)="check($event)"  >{{passvalue}}
     </li>
-</ul>
+</ul> -->
+
+<app-inputfield (newAdd)="get($event)"></app-inputfield>
+<ng-container *ngFor="let i of array">
+<app-to-header [value]="i"></app-to-header>
+
+</ng-container>

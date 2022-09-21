@@ -1,4 +1,4 @@
-import { Component,  OnInit  } from '@angular/core';
+import { Component,  EventEmitter,  OnInit, Output  } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,8 @@ import { Component,  OnInit  } from '@angular/core';
   styleUrls: ['./inputfield.component.scss']
 })
 export class InputfieldComponent implements OnInit {
-NewTask = ''
+  @Output() newAdd =new EventEmitter
+NewTask = ''       // 2 component
 taskList:Array<string> =[];
 
   constructor() { }
@@ -19,14 +20,13 @@ taskList:Array<string> =[];
 
   add(){
     console.log(`-------------------------->`,this.NewTask);
-    this.taskList.push(this.NewTask)
-  //  this.addNewList.emit(this.newTask)
-  }
-  // showList(event:any){
-  //   console.log(event.target.value);
-  //   let a = event.target.value
+    this.newAdd.emit(this.NewTask)
+    // this.taskList.push(this.NewTask) ///2   COMPONET
+
+
   
-  // }
+  }
+  
 
 
   

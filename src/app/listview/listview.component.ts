@@ -7,13 +7,22 @@ import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
 })
 export class ListviewComponent implements OnInit {
   
-  //  @Output() addNewList = new EventEmitter();
   @Input() passvalue:string="";
+  isActive:boolean=true;
+  array:any =[]
 
   constructor() { }
 
   ngOnInit(): void {
   }
- 
+  //  check(event:any){
+  //   this.isActive = !this.isActive
+  //   console.log(this.isActive);
+    
+  //  }
+   get(event:any){
+     this.array.push(event)
+     console.log(`---------------------`,event)
+   }
  
 }

@@ -1,16 +1,17 @@
 
 
 
-
+<div><p>To do List</p></div>
 
 <div class="inputField">
-    <label for="tasks">Enter Your Task</label><br>
+
+    <label for=" ">Enter Your Task</label><br>
     <input type="text" name ="task" [(ngModel)]="NewTask">
-    <button type="button" (click)="add()">Submit</button>
+    <button type="button" (click)="add()">add</button>
 </div>
 
-<ng-container *ngFor="let task of taskList">
+<!-- <ng-container *ngFor="let task of taskList"> 
   <app-listview [passvalue]="task"></app-listview>
-</ng-container>
+</ng-container>  --------------->        <!---2 component-->
 
 

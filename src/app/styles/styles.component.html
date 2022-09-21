@@ -2,7 +2,7 @@
 
 <div>
     <p [ngClass]="'frdz'"> friends</p>  <!---attribute directive-->
-    <span (click)="isChange = !isChange" [ngClass]="isChange?'yes':'no'"> COLORCHANGE</span>
+    <span (click)="isChange = !isChange" [ngClass]="isChange?'yes':'no'"> COLORCHANGE</span> <!---!isactive-not repreasent flase execute first--->
     <span *ngIf = "isChange;else colorChange">green</span>
     <ng-template #colorChange>RED</ng-template>
 </div>

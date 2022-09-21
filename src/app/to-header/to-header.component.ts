@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-to-header',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-header.component.scss']
 })
 export class ToHeaderComponent implements OnInit {
-
+@Input() value:any;
+isActive:boolean=true;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+   check(event:any){
+    this.isActive=!this.isActive
+    console.log(this.isActive);
+    
+   }
 
 }
