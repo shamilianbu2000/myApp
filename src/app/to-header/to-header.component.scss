@@ -2,8 +2,7 @@
     font-family:'Times New Roman', Times, serif ;
     font-size: 20px;
     display: flex;
-   
-    justify-content: center;
+   justify-content: center;
     border: 5px solid rgb(38, 14, 60);
     margin: 0 350px;
  
@@ -12,6 +11,8 @@
 
 .isActive{
 color: violet;
+cursor: pointer;
+   
 }
 .inActive{
 color: rgb(120, 161, 215);

@@ -17,6 +17,12 @@ import { UsersDetailComponent } from './users-detail/users-detail.component';
 import { ToHeaderComponent } from './to-header/to-header.component';
 import { InputfieldComponent } from './inputfield/inputfield.component';
 import { ListviewComponent } from './listview/listview.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { RoutingComponent1Component } from './routing-component1/routing-component1.component';
+import { RoutingComponent2Component } from './routing-component2/routing-component2.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { RelativeComponent } from './relative/relative.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +38,12 @@ import { ListviewComponent } from './listview/listview.component';
     ToHeaderComponent,
     InputfieldComponent,
     ListviewComponent,
+    AboutusComponent,
+    ContactusComponent,
+    RoutingComponent1Component,
+    RoutingComponent2Component,
+    ErrorpageComponent,
+    RelativeComponent,
   ],
 
  
