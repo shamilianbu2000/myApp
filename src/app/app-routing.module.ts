@@ -11,23 +11,28 @@ import { UseridComponent } from './userid/userid.component';
 
 const routes: Routes = [{
   path: 'Slidemenu',
-  component: SlidebarComponent
-  // redirectTo:'aboutus',  
-  // pathMatch: 'full' //redirect one page
+  // component: SlidebarComponent
+  redirectTo:'aboutus',  
+  pathMatch: 'full' //redirect one page
 
 },
 {
   path: 'contactus',
   component: ContactusComponent,
   children: [
+    {path: 'comp1',
+        component: RoutingComponent1Component},
     {
       path: 'relative',
       component: RelativeComponent,
-      children:[{
-        path:':userid',component:UseridComponent
+      children:[
+        {
+        path:':userid',component:UseridComponent}, ]
+    
+         
       }]
-    }
-  ],
+
+     
 
 }, {
   path: 'aboutus',
@@ -45,7 +50,7 @@ const routes: Routes = [{
   ]
 }, {
   path: '**',
-  component: ErrorpageComponent
+  component: SlidebarComponent
 }];
 
 @NgModule({

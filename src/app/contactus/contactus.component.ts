@@ -11,9 +11,9 @@ export class ContactusComponent implements OnInit {
   constructor(private router:Router,private routes:ActivatedRoute) { }
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.router.navigate{['list'],{relativeTo:this.routes}}
-    // }, 2000);
+    setTimeout(() => {
+      this.router.navigate(['comp1'],{relativeTo:this.routes})
+    }, 2000);
     
 }
 }

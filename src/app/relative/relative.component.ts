@@ -10,7 +10,7 @@ import { __param } from 'tslib';
 })
 export class RelativeComponent implements OnInit {
   usersList:Array<any> =[]
-  userId:any ;
+  
   constructor(private router:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -56,19 +56,11 @@ export class RelativeComponent implements OnInit {
     "last_name": "vedha",
     "avatar": "https://reqres.in/img/faces/12-image.jpg"
 } ]
-// navigate(listid:number):void
-// {this.router.navigate[listid],{relativeTo:this.routes}}
-console.log(`----------------------->`,);
+
+
 
 
 }
-// getId(){
-    
-//     this.router.params.subscribe((userId)=>{
-//         // console.log(this.userId)
-//           this.userId = [userId];
-        
-//         })}
 }
 
  
