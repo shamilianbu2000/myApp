@@ -7,9 +7,19 @@
     background-color: navy;
 }
 .home{
-    border: 5px solid black;
-    align-items: flex-end;
-}
+    ul{
+        display: flex;
+         li{
+            padding: 10px;
+            justify-content: space-evenly;
+            a{
+                text-decoration:double;
+            }
+        }
+    }
+ }
+    
+
 
 
 
