@@ -7,33 +7,45 @@ import { RoutingComponent2Component } from './routing-component2/routing-compone
 import { SlidebarComponent } from './slidebar/slidebar.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RelativeComponent } from './relative/relative.component';
+import { UseridComponent } from './userid/userid.component';
+
 const routes: Routes = [{
-  path:'Slidemenu',
-  component:SlidebarComponent
+  path: 'Slidemenu',
+  component: SlidebarComponent
   // redirectTo:'aboutus',  
   // pathMatch: 'full' //redirect one page
 
 },
-  {
-  path:'contactus',
-  component:ContactusComponent,children:[{path:'relative',component:RelativeComponent}]
-},{
-  path:'aboutus',
-  component:AboutusComponent,
-  children:[
-     {
-      path:'comp1',
-      component:RoutingComponent1Component
-     },
+{
+  path: 'contactus',
+  component: ContactusComponent,
+  children: [
+    {
+      path: 'relative',
+      component: RelativeComponent,
+      children:[{
+        path:':userid',component:UseridComponent
+      }]
+    }
+  ],
+
+}, {
+  path: 'aboutus',
+  component: AboutusComponent,
+  children: [
+    {
+      path: 'comp1',
+      component: RoutingComponent1Component
+    },
 
     {
-    path:':user',
-    component:RoutingComponent2Component
-     }
-    ]
+      path: ':user',
+      component: RoutingComponent2Component
+    }
+  ]
 }, {
-  path:'**',
-  component:ErrorpageComponent
+  path: '**',
+  component: ErrorpageComponent
 }];
 
 @NgModule({

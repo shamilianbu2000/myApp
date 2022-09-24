@@ -23,6 +23,7 @@ import { RoutingComponent1Component } from './routing-component1/routing-compone
 import { RoutingComponent2Component } from './routing-component2/routing-component2.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RelativeComponent } from './relative/relative.component';
+import { UseridComponent } from './userid/userid.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { RelativeComponent } from './relative/relative.component';
     RoutingComponent2Component,
     ErrorpageComponent,
     RelativeComponent,
+    UseridComponent,
   ],
 
  

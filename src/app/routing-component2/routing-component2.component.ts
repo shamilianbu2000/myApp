@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-routing-component2',
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./routing-component2.component.scss']
 })
 export class RoutingComponent2Component implements OnInit {
-  userId:any
+  userId!:Params
   constructor(private route:ActivatedRoute) { }
   
   ngOnInit() {
@@ -15,9 +15,9 @@ export class RoutingComponent2Component implements OnInit {
     //   console.log('paramsData',paramsData)
       
     // })}
-    this.route.params.subscribe(userId=>{
+    this.route.params.subscribe((userId)=>{
     console.log(this.userId)
-      this.userId =userId;
+      this.userId = [userId];
     
     })}
 }

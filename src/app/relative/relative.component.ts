@@ -1,5 +1,7 @@
+import { getLocaleId } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { __param } from 'tslib';
 
 @Component({
   selector: 'app-relative',
@@ -8,9 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RelativeComponent implements OnInit {
   usersList:Array<any> =[]
-  constructor(private a:Router,private b:ActivatedRoute) { }
+  userId:any ;
+  constructor(private router:ActivatedRoute) { }
 
-  ngOnInit(): void {this.usersList=[{
+  ngOnInit(): void {
+    this.usersList=[{
     "id": 1,
     "email": "shamilianbu200",
     "first_name": "sham",
@@ -51,12 +55,21 @@ export class RelativeComponent implements OnInit {
     "first_name": "uma",
     "last_name": "vedha",
     "avatar": "https://reqres.in/img/faces/12-image.jpg"
+} ]
+// navigate(listid:number):void
+// {this.router.navigate[listid],{relativeTo:this.routes}}
+console.log(`----------------------->`,);
+
+
 }
-]
-navigate(listid:number):void
-{this.a.navigate[listid],{relativeTo:this.b}}
+// getId(){
+    
+//     this.router.params.subscribe((userId)=>{
+//         // console.log(this.userId)
+//           this.userId = [userId];
+        
+//         })}
 }
 
  
 
-}

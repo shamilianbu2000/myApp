@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContactusComponent } from '../contactus/contactus.component';
 
 @Component({
@@ -9,14 +9,14 @@ import { ContactusComponent } from '../contactus/contactus.component';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor(private routes:ActivatedRoute,private router:Router) { }
+  constructor(private router:Router,private routes:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.routes.params.subscribe(userdata=>{console.log(userdata)}
         )
-        Clicknavigate():void{
-          this.router.navigate(['contactus'])
-      }
+      //   Clicknavigate():void{
+      //     this.router.navigate(['contactus'])
+      // }
       
       }
   }
