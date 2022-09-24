@@ -10,7 +10,7 @@ import { RelativeComponent } from './relative/relative.component';
 import { UseridComponent } from './userid/userid.component';
 
 const routes: Routes = [{
-  path: 'Slidemenu',
+  path: '',
   // component: SlidebarComponent
   redirectTo:'aboutus',  
   pathMatch: 'full' //redirect one page
@@ -44,11 +44,19 @@ const routes: Routes = [{
     },
 
     {
-      path: ':user',
+      path: ':user',///any componenet can do redirect page
       component: RoutingComponent2Component
     }
   ]
-}, {
+},
+{
+  path:'new',
+  loadChildren:()=>import('./module/module.module').then(m=>m.ModuleModule
+  )
+},
+
+
+{
   path: '**',
   component: SlidebarComponent
 }];

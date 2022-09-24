@@ -45,7 +45,7 @@ import { UseridComponent } from './userid/userid.component';
     RoutingComponent2Component,
     ErrorpageComponent,
     RelativeComponent,
-    UseridComponent,
+    UseridComponent
   ],
 
  
