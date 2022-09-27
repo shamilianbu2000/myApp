@@ -31,6 +31,7 @@ export class FormComponent implements OnInit {
       
     })
   }
+  
 
   addUser(){
     this.appService.addUser({name:this.userName,mail:this.userMail,message:this.message}).subscribe((data)=>{
