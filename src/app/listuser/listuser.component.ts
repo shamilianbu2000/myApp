@@ -31,7 +31,7 @@ export class ListuserComponent implements OnInit {
 
 
   deleteUser(id:number){
-      
+    
   }
  
 
