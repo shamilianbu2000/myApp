@@ -9,11 +9,14 @@
 .home{
     ul{
         display: flex;
+        list-style: none;
          li{
             padding: 10px;
             justify-content: space-evenly;
+            background-color: gray;
+            border: 2px solid black;
             a{
-                text-decoration:double;
+                text-decoration:none;
             }
         }
     }

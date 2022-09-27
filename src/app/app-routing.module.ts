@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -8,14 +8,32 @@ import { SlidebarComponent } from './slidebar/slidebar.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RelativeComponent } from './relative/relative.component';
 import { UseridComponent } from './userid/userid.component';
+import { MainComponent } from './main/main.component';
+import { FormComponent } from './form/form.component';
+import { ListuserComponent } from './listuser/listuser.component';
 
-const routes: Routes = [{
-  path: '',
-  // component: SlidebarComponent
-  redirectTo:'aboutus',  
-  pathMatch: 'full' //redirect one page
+const routes: Routes = [ {
+  path : "",
+  redirectTo : "adduser",
+  pathMatch : "full"
+},
+{
+  path : "adduser",
+  component : FormComponent
+},
+{
+  path : "userlist",
+  component : ListuserComponent
+},
+{
+  path : "userlist/edituser/:id",
+  component : FormComponent
 
 },
+// {
+//   path:'main',
+//   component: MainComponent
+// },
 {
   path: 'contactus',
   component: ContactusComponent,

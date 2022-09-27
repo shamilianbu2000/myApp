@@ -1,0 +1,24 @@
+<div class="userlist"></div>
+ <table>
+    <tr>
+        <th>s.no</th>
+        <th>name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of usersList,index as i" >
+    
+            <td>{{i+1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.EMAIL}}</td>
+            <td>{{user.msg}}</td>
+
+       
+        <td>
+            <span><button (click)="editUser(user.id)">Edit</button></span>
+            <span><button (click)="deleteUser(user.id)">Delete</button></span>
+        </td>
+    </tr>
+    <button type ="button" routerLink="/adduser">Add user</button>
+ </table>

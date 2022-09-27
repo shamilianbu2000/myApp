@@ -24,6 +24,9 @@ import { RoutingComponent2Component } from './routing-component2/routing-compone
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RelativeComponent } from './relative/relative.component';
 import { UseridComponent } from './userid/userid.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
+import { ListuserComponent } from './listuser/listuser.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,9 @@ import { UseridComponent } from './userid/userid.component';
     RoutingComponent2Component,
     ErrorpageComponent,
     RelativeComponent,
-    UseridComponent
+    UseridComponent,
+    FormComponent,
+    ListuserComponent
   ],
 
  
@@ -54,7 +59,8 @@ import { UseridComponent } from './userid/userid.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     
   ],
   
