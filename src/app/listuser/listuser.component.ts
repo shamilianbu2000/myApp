@@ -31,6 +31,9 @@ export class ListuserComponent implements OnInit {
 
 
   deleteUser(id:number){
+    this.appService.delete(id).subscribe((data)=>{
+      this.userDetails();
+    })
     
   }
  

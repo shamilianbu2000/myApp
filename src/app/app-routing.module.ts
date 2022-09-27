@@ -13,9 +13,9 @@ import { FormComponent } from './form/form.component';
 import { ListuserComponent } from './listuser/listuser.component';
 
 const routes: Routes = [ {
-  path : "",
-  redirectTo : "adduser",
-  pathMatch : "full"
+  // path : "",
+  // redirectTo : "adduser",
+  // pathMatch : "full"
 },
 {
   path : "adduser",
@@ -30,10 +30,10 @@ const routes: Routes = [ {
   component : FormComponent
 
 },
-// {
-//   path:'main',
-//   component: MainComponent
-// },
+{
+  path:'main',
+  component: MainComponent
+},
 {
   path: 'contactus',
   component: ContactusComponent,

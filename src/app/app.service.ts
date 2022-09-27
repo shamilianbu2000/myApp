@@ -8,9 +8,9 @@ export class AppService {
 
   constructor(private client:HttpClient) { }
 
-//   get(){
-//      return this.client.get('https://jsonplaceholder.typicode.com/users')
-//   }
+  get(){
+     return this.client.get('https://jsonplaceholder.typicode.com/users')
+  }
 //   getUser(){
 //     return this.client.post('http://localhost:3000/users',{'id':775})
 //  }
@@ -31,6 +31,7 @@ update(name:{id:number,name:string,mail:string,message:string}){
 }
 
 delete(id:number){
-  return this.client.delete(environment.appurl+"")
+  return this.client.delete(environment.appurl+"delete?id="+id);
 }
+
 }
