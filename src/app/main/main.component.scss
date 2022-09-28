@@ -11,7 +11,7 @@
 
 .leftside{
     position: absolute;
-    width: 676px;
+    width: 505;
     height: 100%;
     left: 0px;
     top: 0px;
@@ -20,6 +20,11 @@
     padding-right:31;
     padding-left: 31;
     background: #2F4BDE;
+}
+
+.rigtside{
+    justify-content: center;
+    width: 50px;
 }
 
 #rightblue{
@@ -453,7 +458,7 @@
 #input{
 
 box-sizing: border-box;
-line-height: 3px;
+
 
 display: flex;
 flex-direction: column;
@@ -492,7 +497,7 @@ flex-grow: 0;
     font-weight: 530;
     font-size: 12px;
     line-height: 15px;
-
+    
     color: #1B2228;
     flex: none;
     order: 0;
