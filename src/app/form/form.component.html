@@ -1,11 +1,11 @@
-<div class="header">
+<!-- <div class="header">
     {{isUpdate?'Edit User':'Add User'}}
 
 </div>
 
-<div class="forms">
+<div class="forms" [formGroup]="userForm">
     <label for="name">Name</label>
-    <input type="text" [(ngModel)] = "userName" name = "name" id="name">
+    <input type="text" [(ngModel)] = "userName" formname = "name" id="name">
     <label for="mail">mail</label>
     <input type="text" [(ngModel)] = "userMail" name = "mail" id="mail">
     <label for="msg">msg</label>
@@ -13,9 +13,35 @@
 
     <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
     <button  *ngIf="isUpdate" (click)="update()">update</button>
-
-   
 </div>
+ 
+  -->
 
+<div [formGroup]="userForm">
 
-
+    <div>
+     <label for="name">Name</label>
+     <div>
+         <input type="text" required minlength="4" formControlName="userName" name="name" id="name">
+     </div>
+     <div *ngIf="forms['userName'].invalid && ( forms['userName'].dirty || forms['userName'].touched )">
+         <div *ngIf="forms['userName'].errors?.required">
+             Name is required
+         </div>
+         <div *ngIf="forms['userName'].errors?.minlength" >
+             Name should be length of 4
+         </div>
+     </div>
+ 
+    </div>
+     <div>
+         <label for="mail">Mail</label>
+         <div>
+         <input type="text" formControlName="userMail" name="mail" id="mail">
+         </div>
+     </div>
+ 
+     <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+     <button *ngIf="isUpdate" (click)="updateUser()">Update User</button>
+ 
+ </div>

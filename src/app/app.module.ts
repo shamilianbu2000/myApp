@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { SlidebarComponent } from './slidebar/slidebar.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { StylesComponent } from './styles/styles.component';
 
 import { ChildComponent } from './child/child.component';
@@ -60,7 +60,8 @@ import { ListuserComponent } from './listuser/listuser.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   
