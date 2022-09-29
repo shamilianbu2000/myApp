@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,Validators } from '@angular/forms';
+import { FormBuilder,Validators,FormControl,FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
 import { AppService } from '../app.service';
@@ -17,15 +17,22 @@ export class FormComponent implements OnInit {
   usersList: Array<any> = [];
   userId: number = 0;
   data: any;
-  userForm:any
+  userForm:any;
+  userMsg:any;
 
   constructor(private appService:AppService,private route:ActivatedRoute,private routes:Router,private form:FormBuilder) { }
 
   ngOnInit(): void {
 
-    this.userForm = this.form.group({
-      userName : [null, [Validators.required, Validators.minLength(4)]],
-      userMail : [null, [Validators.required, Validators.email]]
+    // this.userForm = this.form.group({
+    //   userName : [null, [Validators.required, Validators.minLength(4)]],
+    //   userMail : [null, [Validators.required, Validators.email]]//formbuilder
+    // })
+
+     this.userForm = this.form.group({
+      userName :new FormControl(null, [Validators.required, Validators.minLength(4)]),
+      userMail :new FormControl(null, [Validators.required, Validators.email]),
+      userMsg :new FormControl(null,null)//formcontol with formgroup
     })
 
 
@@ -39,9 +46,17 @@ export class FormComponent implements OnInit {
       }
       
     })
+
+
   }
+
+
   get forms(){
     return this.userForm.controls
+  }
+
+  get for(){
+    return this.userForm.controls.userName
   }
   
 
@@ -66,7 +81,7 @@ export class FormComponent implements OnInit {
     })
   }
 
-  updateUser(){
+  update(){
     this.appService.update({id:this.userId,name:this.userName,mail:this.userMail,message:this.message}).subscribe((data)=>{
       console.log(data);
       this.routes.navigate(['userlist'])
