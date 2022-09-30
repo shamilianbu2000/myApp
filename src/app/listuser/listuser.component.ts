@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from '../app.service';
+// import { Product } from '../../domain/product';
+// import { ProductService } from '../../service/productservice';
 
 @Component({
   selector: 'app-listuser',
@@ -12,7 +14,7 @@ export class ListuserComponent implements OnInit {
   constructor(private route:ActivatedRoute,private appService:AppService,private router:Router) { }
   usersList:any;
   data:any;
-  
+  products=[];
 
   ngOnInit(): void {
     this.userDetails();

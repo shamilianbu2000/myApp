@@ -9,6 +9,7 @@ import { SlidebarComponent } from './slidebar/slidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { StylesComponent } from './styles/styles.component';
+import {InputTextModule} from 'primeng/inputtext';
 
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
@@ -26,7 +27,8 @@ import { RelativeComponent } from './relative/relative.component';
 import { UseridComponent } from './userid/userid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
-import { ListuserComponent } from './listuser/listuser.component'
+import { ListuserComponent } from './listuser/listuser.component';
+import { LoginComponent } from './login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { ListuserComponent } from './listuser/listuser.component'
     RelativeComponent,
     UseridComponent,
     FormComponent,
-    ListuserComponent
+    ListuserComponent,
+    LoginComponent,
+
   ],
 
  
@@ -61,7 +65,8 @@ import { ListuserComponent } from './listuser/listuser.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputTextModule
     
   ],
   

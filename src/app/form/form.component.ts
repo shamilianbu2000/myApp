@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,Validators,FormControl,FormGroup } from '@angular/forms';
+import { FormBuilder,Validators } from '@angular/forms'; ///,FormControl,FormGroup
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
 import { AppService } from '../app.service';
@@ -24,16 +24,17 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.userForm = this.form.group({
-    //   userName : [null, [Validators.required, Validators.minLength(4)]],
-    //   userMail : [null, [Validators.required, Validators.email]]//formbuilder
-    // })
-
-     this.userForm = this.form.group({
-      userName :new FormControl(null, [Validators.required, Validators.minLength(4)]),
-      userMail :new FormControl(null, [Validators.required, Validators.email]),
-      userMsg :new FormControl(null,null)//formcontol with formgroup
+    this.userForm = this.form.group({
+      userName : [null, [Validators.required, Validators.minLength(4)]],
+      userMail : [null, [Validators.required, Validators.email]],//formbuilder
+       userMsg : [null,[]]
     })
+
+    //  this.userForm = this.form.group({
+    //   userName :new FormControl(null, [Validators.required, Validators.minLength(4)]),
+    //   userMail :new FormControl(null, [Validators.required, Validators.email]),
+    //   userMsg :new FormControl(null,null)//formcontol with formgroup
+    // })
 
 
     this.route.params.subscribe((data)=>{
@@ -55,13 +56,14 @@ export class FormComponent implements OnInit {
     return this.userForm.controls
   }
 
-  get for(){
-    return this.userForm.controls.userName
-  }
+  // get for(){
+  //   return this.userForm.controls.userName
+  // }
   
 
   addUser(){
-    this.appService.addUser({name:this.userName,mail:this.userMail,message:this.message}).subscribe((data)=>{
+    console.log("----------->",this.forms);
+    this.appService.addUser({name:this.forms['userName'].value,email:this.forms['userMail'].value,message:this.forms['userMsg'].value}).subscribe((data)=>{
       console.log(data);
       this.routes.navigate(['userlist'])
       

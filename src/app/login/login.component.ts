@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder,Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit {
+  userName:any;
+
+  constructor(private form:FormBuilder) { }
+
+  ngOnInit(): void {
+
+  }
+  
+
+
+
+}

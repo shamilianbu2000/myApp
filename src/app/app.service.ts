@@ -15,7 +15,7 @@ export class AppService {
 //     return this.client.post('http://localhost:3000/users',{'id':775})
 //  }
 
-addUser(name:{name:string;mail:string;message:string}){
+addUser(name:{name:string;email:string;message:string}){
   return this.client.post(environment.appurl+"sql",name);
 
 }

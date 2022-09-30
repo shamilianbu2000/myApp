@@ -11,11 +11,13 @@ import { UseridComponent } from './userid/userid.component';
 import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
 import { ListuserComponent } from './listuser/listuser.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [ {
   path : "",
   redirectTo : "adduser",
   pathMatch : "full"
+  // component:LoginComponent
 },
 {
   path : "adduser",

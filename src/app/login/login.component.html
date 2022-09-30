@@ -1,0 +1,21 @@
+<div class="login">
+
+    <h5 id="head">LOGIN</h5>
+    <div class="field">
+        <div for="username2" class="block">Username
+        <input id="username2" type="text" aria-describedby="username2-help" class="ng-invalid ng-dirty"  required minlength="8"  [(ngModel)]="userName"  #username2="ngModel"  pInputText />
+        </div>
+        <div id="username2-help" class="p-error block"  *ngIf = "username2.invalid && (username2.dirty || username2.touched)" style="color:red;">Username is not available
+        </div>
+       
+    </div>
+
+    <div class="field">
+        <div for="username2" class="block">Username
+        <input id="username2" type="text" aria-describedby="username2-help" class="ng-invalid ng-dirty"  required minlength="8"  [(ngModel)]="userName"  #username2="ngModel"  pInputText />
+        </div>
+        <div id="username2-help" class="p-error block"  *ngIf = "username2.invalid && (username2.dirty || username2.touched)" style="color:red;">Username is not available
+        </div>
+       
+    </div>
+</div>
