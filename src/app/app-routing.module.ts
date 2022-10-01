@@ -17,7 +17,7 @@ const routes: Routes = [ {
   path : "",
   redirectTo : "adduser",
   pathMatch : "full"
-  // component:LoginComponent
+  //  component:LoginComponent
 },
 {
   path : "adduser",

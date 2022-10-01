@@ -25,30 +25,54 @@
 
 
 
- <!-- <p-table [value]="products" responsiveLayout="scroll">
-    <ng-template pTemplate="header">
-       
-        <tr>
-            <th>s.no</th>
-            <th>name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Action</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-product>
-        <tr *ngFor="let user of usersList,index as i">
-            <td>{{i+1}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.EMAIL}}</td>
-            <td>{{user.msg}}</td>
-        </tr>
-    </ng-template>
-</p-table>
+ <p-table [value]="usersList" responsiveLayout="scroll"  [rowHover]="true"
+ [rows]="3" [showCurrentPageReport]="true"
+ [filterDelay]="0" [globalFilterFields]="['name','Email','Message','action']"
+ [paginator]="true" currentPageReportTemplate= "Showing {first} to {last} of {totalRecords} entries"
+ >
 
+ <ng-template pTemplate="caption">
+<div class="search">
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input pInputText type="text" (input)="usersList.filterGlobal($event.target)"  placeholder="Global Search" />
+    </span>
+</div>
+
+ </ng-template>
+
+ <ng-template pTemplate="header" >
+  
+   
+    
+    
+        
+
+   
+    <tr >
+
+        <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
+
+        <th pSortableColumn="name">Email<p-sortIcon field="name"></p-sortIcon> </th>
+        <th pSortableColumn="name">Message<p-sortIcon field="name"></p-sortIcon></th>
+        <th pSortableColumn="name">ACTION<p-sortIcon field="name"></p-sortIcon></th>
+    </tr>
+</ng-template> 
+<ng-template pTemplate="body" let-user >
+    <tr >
+       
+        <td>{{user.name}}</td>
+        <td>{{user.EMAIL}}</td>
+        <td>{{user.msg}}</td>
+
+
+        
 <span><button (click)="editUser(user.id)">Edit</button></span>
 <span><button (click)="deleteUser(user.id)">Delete</button></span>
+</tr>
+</ng-template>
+</p-table>
 
 
 
-<button type ="button" routerLink="/adduser">Add user</button> -->
+<button type ="button" routerLink="/adduser">Add user</button> 

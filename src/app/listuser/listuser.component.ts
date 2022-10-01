@@ -15,8 +15,13 @@ export class ListuserComponent implements OnInit {
   usersList:any;
   data:any;
   products=[];
+  cols: any[] = [];
+  value:string='';
 
   ngOnInit(): void {
+
+
+
     this.userDetails();
     }
    userDetails(){

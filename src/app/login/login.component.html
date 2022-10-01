@@ -1,4 +1,4 @@
-<div class="login">
+<!-- <div class="login">
 
     <h5 id="head">LOGIN</h5>
     <div class="field">
@@ -18,4 +18,66 @@
         </div>
        
     </div>
-</div>
+</div> -->
+<!-- 
+<div id="card">
+            <div class="container-Fluid" >
+                <div class="row" *ngFor="let userName">
+                    <div class="col-4" style="border:5px black solid;">
+                        <p-card>
+                        <ng-template pTemplate="header" styleClass ="card1/">
+                            Header content here
+                        </ng-template>
+                        Body Content
+                        <ng-template pTemplate="footer">
+                            Footer content here
+                        </ng-template>
+   
+   
+                    </p-card>
+                   
+                </div>
+                   
+                
+
+
+                
+            </div>
+            
+</div> -->
+
+
+
+
+<div id="card">
+<div class="container-Fluid">
+    <div class="row">
+
+        
+            <ng-container  *ngFor="let i of userName" >
+
+                <div class="cards">
+      
+                <p-card>
+        
+                
+                    <ng-template pTemplate="header" >
+                    {{i.email}}
+                    </ng-template>
+                    {{i.first_name}}
+                    <ng-template pTemplate="footer">
+                      {{i.id}}
+                    </ng-template>
+
+                
+                    
+<button pButton type="button" label="Small" icon="pi pi-check" (click)="event()" [loading]="isLoading" ></button>
+             </p-card>    
+            </div>
+            </ng-container>
+          
+     
+        </div>
+    
+        </div>
+    </div>

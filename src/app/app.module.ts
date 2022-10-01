@@ -10,6 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { StylesComponent } from './styles/styles.component';
 import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
+import {CardModule} from 'primeng/card';
+
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+                //api
+
+
+
 
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
@@ -29,6 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { ListuserComponent } from './listuser/listuser.component';
 import { LoginComponent } from './login/login.component'
+import {ButtonModule} from 'primeng/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +64,7 @@ import { LoginComponent } from './login/login.component'
     FormComponent,
     ListuserComponent,
     LoginComponent,
+    
 
   ],
 
@@ -66,7 +77,13 @@ import { LoginComponent } from './login/login.component'
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    InputTextModule
+    InputTextModule,
+    TableModule,
+    CardModule,
+    ButtonModule,
+    AccordionModule,
+  
+  
     
   ],
   

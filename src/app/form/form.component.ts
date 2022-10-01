@@ -25,9 +25,9 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
 
     this.userForm = this.form.group({
-      userName : [null, [Validators.required, Validators.minLength(4)]],
-      userMail : [null, [Validators.required, Validators.email]],//formbuilder
-       userMsg : [null,[]]
+      name : [null, [Validators.required, Validators.minLength(4)]],
+      Email : [null, [Validators.required, Validators.email]],//formbuilder
+      msg : [null,[]]
     })
 
     //  this.userForm = this.form.group({
@@ -63,7 +63,7 @@ export class FormComponent implements OnInit {
 
   addUser(){
     console.log("----------->",this.forms);
-    this.appService.addUser({name:this.forms['userName'].value,email:this.forms['userMail'].value,message:this.forms['userMsg'].value}).subscribe((data)=>{
+    this.appService.addUser(this.userForm.value).subscribe((data)=>{
       console.log(data);
       this.routes.navigate(['userlist'])
       
@@ -73,12 +73,15 @@ export class FormComponent implements OnInit {
   }
 
   editId(id:number){
-    this.appService.editId(id).subscribe((data)=>{
-      console.log(`------------------------data`);
-      this.data = data;
-      this.userName =this.data.result[0].name;
-      this.userMail =this.data.result[0].EMAIL;
-      this.message = this.data.result[0].msg;
+    this.appService.editId(id).subscribe((data:any)=>{
+      console.log(`------------------------data`,data);
+      // this.data = data;
+      // this.userName =this.data.result[0].name;
+      // this.userMail =this.data.result[0].EMAIL;
+      // this.message = this.data.result[0].msg;
+
+      this.userForm.patchValue(data.result[0]);
+      
       
     })
   }
