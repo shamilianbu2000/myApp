@@ -42,11 +42,42 @@ import { LoginComponent } from './login/login.component'
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService, MessageService} from 'primeng/api';
 import { TooltipModule } from 'primeng/tooltip';
 
+const ngx:NgxUiLoaderConfig =
+{
+  "bgsColor": "red",
+  "bgsOpacity": 0.5,
+  "bgsPosition": "bottom-right",
+  "bgsSize": 60,
+  "bgsType": "ball-spin-clockwise",
+  "blur": 5,
+  "delay": 0,
+  "fastFadeOut": true,
+  "fgsColor": "red",
+  "fgsPosition": "center-center",
+  "fgsSize": 60,
+  "fgsType": "wandering-cubes",
+  "gap": 24,
+  "logoPosition": "center-center",
+  "logoSize": 120,
+  "logoUrl": "",
+  "masterLoaderId": "master",
+  "overlayBorderRadius": "0",
+  "overlayColor": "rgba(40, 40, 40, 0.8)",
+  "pbColor": "red",
+  "pbDirection": "ltr",
+  "pbThickness": 3,
+  "hasProgressBar": true,
+  "text": "",
+  "textColor": "#FFFFFF",
+  "textPosition": "center-center",
+  "maxTime": -1,
+  "minTime": 300
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +102,8 @@ import { TooltipModule } from 'primeng/tooltip';
     UseridComponent,
     FormComponent,
     ListuserComponent,
-    LoginComponent
+    LoginComponent,
+    
  
 
 
@@ -97,7 +129,9 @@ import { TooltipModule } from 'primeng/tooltip';
     ConfirmDialogModule,
     BrowserAnimationsModule,
     TooltipModule,
-    SidebarModule
+    SidebarModule,
+    NgxUiLoaderModule.forRoot(ngx),
+    NgxUiLoaderHttpModule.forRoot({showForeground:true}),
     
   ],
   
