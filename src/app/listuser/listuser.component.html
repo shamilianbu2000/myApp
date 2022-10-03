@@ -24,32 +24,32 @@
  </table> -->
 
 
+ 
 
- <p-table [value]="usersList" responsiveLayout="scroll"  [rowHover]="true"
+ <p-table class="table" #dt [value]="usersList" responsiveLayout="scroll"  [rowHover]="true"
  [rows]="3" [showCurrentPageReport]="true"
  [filterDelay]="0" [globalFilterFields]="['name','Email','Message','action']"
  [paginator]="true" currentPageReportTemplate= "Showing {first} to {last} of {totalRecords} entries"
  >
-
+<!-- ?global search -->
  <ng-template pTemplate="caption">
-<div class="search">
-    <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input pInputText type="text" (input)="usersList.filterGlobal($event.target)"  placeholder="Global Search" />
-    </span>
-</div>
+    <div class="table-header">
+        List of Customers
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="filterGlobal($event)" placeholder="Global Search" >
+        </span>
+    </div>
+</ng-template>
 
- </ng-template>
 
- <ng-template pTemplate="header" >
-  
-   
-    
-    
-        
 
-   
+
+ <ng-template pTemplate="header">
     <tr >
+        <th style="width: 3px">
+            <p-tableHeaderCheckbox ></p-tableHeaderCheckbox>
+        </th>
 
         <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
 
@@ -60,7 +60,8 @@
 </ng-template> 
 <ng-template pTemplate="body" let-user >
     <tr >
-       
+       <td>
+        <p-tableCheckbox [value]="usersList" ></p-tableCheckbox></td>
         <td>{{user.name}}</td>
         <td>{{user.EMAIL}}</td>
         <td>{{user.msg}}</td>

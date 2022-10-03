@@ -13,6 +13,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 
+import {SidebarModule} from 'primeng/sidebar';
+
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
                 //api
 
@@ -38,6 +40,11 @@ import { FormComponent } from './form/form.component';
 import { ListuserComponent } from './listuser/listuser.component';
 import { LoginComponent } from './login/login.component'
 import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService, MessageService} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -63,7 +70,10 @@ import {ButtonModule} from 'primeng/button';
     UseridComponent,
     FormComponent,
     ListuserComponent,
-    LoginComponent,
+    LoginComponent
+ 
+
+
     
 
   ],
@@ -82,12 +92,15 @@ import {ButtonModule} from 'primeng/button';
     CardModule,
     ButtonModule,
     AccordionModule,
+    ToastModule,
+    ConfirmDialogModule,
+    BrowserAnimationsModule,
   
-  
+    SidebarModule
     
   ],
   
-  providers: [],
+  providers: [ConfirmationService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

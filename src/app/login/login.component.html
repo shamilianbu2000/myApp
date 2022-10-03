@@ -44,9 +44,7 @@
                 
             </div>
             
-</div> -->
-
-
+</div> --> 
 
 
 <div id="card">
@@ -54,7 +52,7 @@
     <div class="row">
 
         
-            <ng-container  *ngFor="let i of userName" >
+            <ng-container  *ngFor="let i of usersList" >
 
                 <div class="cards">
       
@@ -62,22 +60,55 @@
         
                 
                     <ng-template pTemplate="header" >
-                    {{i.email}}
+                    {{i.name}}
                     </ng-template>
-                    {{i.first_name}}
+                    {{i.EMAIL}}
                     <ng-template pTemplate="footer">
-                      {{i.id}}
+                      {{i.msg}}
                     </ng-template>
-
-                
-                    
-<button pButton type="button" label="Small" icon="pi pi-check" (click)="event()" [loading]="isLoading" ></button>
+ 
              </p-card>    
             </div>
             </ng-container>
-          
-     
-        </div>
+
+
+          <div>
+
+            <p-confirmDialog header="Confirmation" [baseZIndex]="10000" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+            <button (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button>
+          </div>
+                              
+<p-toast position="center" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+         </div>
     
         </div>
-    </div>
+    </div> 
+
+ 
+
+<p-sidebar [(visible)]="sidebar" position="right" [baseZIndex]="1000000" class="sidebar">
+
+ 
+   
+</p-sidebar>
+
+<button pButton type="button" label="Small" icon="pi-arrow-right" (click)="sidebar = true" ></button>
+             
+
+ <p-confirmDialog #cd [style]="{width: '50vw'}">
+    <ng-template pTemplate="header">
+        <h3>Header Content</h3>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button type="button" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+        <button type="button" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+        <!-- <p-button type="button" class="mr-2" (click)="visibleSidebar2 = true" icon="pi pi-arrow-right"></p-button> -->
+    </ng-template>
+</p-confirmDialog> 
+
+
+<button pButton type="button" label="Small" icon="pi pi-check" (click)="event()" [loading]="isLoading" ></button>
+<button pButton pRipple type="button"   (click)= "login()" [disabled]="!isactive" label="Success" class="p-button-raised p-button-success"></button>
+
+<button pButton pRipple type="button" label="Danger" class="p-button-outlined p-button-danger" style="background-color: saddlebrown;" ></button>

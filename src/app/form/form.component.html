@@ -137,7 +137,7 @@
         <input type="text" id="email" name="email"  formControlName="Email"pInputText >
         <span class="firsterror" *ngIf="forms['Email'].invalid && (forms['Email'].touched || forms['Email'].dirty)">
             <p *ngIf="forms['Email'].errors?.required" style="font-size:15pX" >error in input</p>
-            <p *ngIf="forms['Email'].errors?.minlength" style="font-size:15pX" >min length of 4</p>
+            <p *ngIf="forms['Email'].errors?.email" style="font-size:15pX" >mail is not valid</p>
         </span>
     </div>
 </div>
@@ -153,7 +153,7 @@
 
      
 
-        <button pButton type="button"  *ngIf="!isUpdate" class="Secondary" (click)="addUser()">add user</button>
+        <button pButton type="button"  *ngIf="!isUpdate" class="Secondary" (click)="formvalid()" >add user</button>
         
 
         <button *ngIf="isUpdate" (click)="update()">Submit</button>

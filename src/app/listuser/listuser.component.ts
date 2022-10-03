@@ -17,6 +17,8 @@ export class ListuserComponent implements OnInit {
   products=[];
   cols: any[] = [];
   value:string='';
+  issearch:boolean=true;
+  data1:any;
 
   ngOnInit(): void {
 
@@ -43,6 +45,26 @@ export class ListuserComponent implements OnInit {
     })
     
   }
- 
 
+filterGlobal(data1:any){
+console.log('okkk',data1.target.value);
+var find = data1.target.value
+if(find != null){
+  this.appService.getUser().subscribe((result)=>{
+    this.data = result
+    console.log("---------->",this.data.result);
+  
+    // if( find[i] == this.data.result[i]){
+    //   console.log(this.data.result)
+    // }
+  })
+  
+  }
 }
+//   isOutofbox(data:any) {
+//     return data.inventoryStatus === 'OUTOFSTOCK';
+// }
+
+
+
+  }

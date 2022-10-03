@@ -92,6 +92,14 @@ export class FormComponent implements OnInit {
       this.routes.navigate(['userlist'])
     })
     }
+
+    formvalid(){
+      if(this.userForm.invalid){
+        return this.userForm.markAllAsTouched();
+      }
+
+      this.addUser()
+    }
   }
 
 
