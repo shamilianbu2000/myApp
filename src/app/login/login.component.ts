@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit {
   usersList:any;
   data:any;
   sidebar:any;
+  passwordToolTip = "At least 8 characters in length Should contain:" +
+  "Lower case letters (a-z)" +
+  "Upper case letters (A-Z)" +
+  "Numbers (i.e. 0-9)";
   
 
   constructor(private form:FormBuilder,private msgservice:MessageService,private confirmation:ConfirmationService,private appService:AppService,private primengConfig: PrimeNGConfig ) { }
