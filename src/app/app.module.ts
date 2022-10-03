@@ -45,6 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService, MessageService} from 'primeng/api';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,7 @@ import {ConfirmationService, MessageService} from 'primeng/api';
     ToastModule,
     ConfirmDialogModule,
     BrowserAnimationsModule,
-  
+    TooltipModule,
     SidebarModule
     
   ],
