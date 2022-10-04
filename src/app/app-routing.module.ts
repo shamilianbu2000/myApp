@@ -16,9 +16,9 @@ import { AuthguardGuard } from './authguard.guard';
 
 const routes: Routes = [ {
   path : "",
-  redirectTo : "adduser",
-  pathMatch : "full"
-  //  component:LoginComponent
+  // redirectTo : "adduser",
+  // pathMatch : "full"
+  component:LoginComponent
 },
 {
   path : "adduser",

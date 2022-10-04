@@ -46,6 +46,7 @@ import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService, MessageService} from 'primeng/api';
 import { TooltipModule } from 'primeng/tooltip';
+import {TabMenuModule} from 'primeng/tabmenu';
 
 const ngx:NgxUiLoaderConfig =
 {
@@ -60,7 +61,7 @@ const ngx:NgxUiLoaderConfig =
   "fgsColor": "red",
   "fgsPosition": "center-center",
   "fgsSize": 60,
-  "fgsType": "wandering-cubes",
+  "fgsType": "ball-spin-clockwise",
   "gap": 24,
   "logoPosition": "center-center",
   "logoSize": 120,
@@ -132,6 +133,7 @@ const ngx:NgxUiLoaderConfig =
     SidebarModule,
     NgxUiLoaderModule.forRoot(ngx),
     NgxUiLoaderHttpModule.forRoot({showForeground:true}),
+    TabMenuModule
     
   ],
   

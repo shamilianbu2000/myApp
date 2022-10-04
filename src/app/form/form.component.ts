@@ -19,6 +19,7 @@ export class FormComponent implements OnInit {
   data: any;
   userForm:any;
   userMsg:any;
+  isdisable:boolean=true;
 
   constructor(private appService:AppService,private route:ActivatedRoute,private routes:Router,private form:FormBuilder) { }
 
@@ -95,10 +96,13 @@ export class FormComponent implements OnInit {
 
     formvalid(){
       if(this.userForm.invalid){
+        this.isdisable=false;
         return this.userForm.markAllAsTouched();
+        
       }
-
+      
       this.addUser()
+
     }
   }
 

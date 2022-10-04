@@ -153,7 +153,7 @@
 
      
 
-        <button pButton type="button"  *ngIf="!isUpdate" class="Secondary" (click)="formvalid()" >add user</button>
+        <button pButton type="button"  *ngIf="!isUpdate" class="Secondary" (click)="formvalid()" [disabled]="userForm.invalid && userForm.touched">add user</button>
         
 
         <button *ngIf="isUpdate" (click)="update()">Submit</button>
