@@ -32,9 +32,9 @@ export class ListuserComponent implements OnInit {
       this.data = data
       console.log("---------->",this.data.result);
       this.usersList = this.data.result
-      if(this.usersList == )
-      return this.usersList.filter(this.usersList => 
-      user.checked);
+      // if(this.usersList == )
+      // return this.usersList.filter(this.usersList => 
+      // user.checked);
   
       
     })
