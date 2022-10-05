@@ -1,0 +1,37 @@
+<div id="last">
+    <div class="container-Fluid" >
+        <div class="row" style="background:rgb(200, 160, 160);height: 140px;">
+            
+        </div>
+        <div class="row">
+            <div class="col-6"   style="background-color: rgb(136, 230, 22);height: 430px;"></div>
+            <div class="col-6" style="background-color:rgb(180, 180, 248)"></div>
+        </div>
+        <div class="row">
+            <div class="col-6" style="border: 2px solid blue; height:190px;">
+                <p>hi,everyone</p>
+
+                <i class="pi pi-whatsapp" style="font-size: 2rem"></i>
+
+                <i class="pi pi-twitter" style="font-size: 2rem"></i>
+
+                <i class="pi pi-facebook" style="font-size: 2rem"></i>
+            </div>
+         
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">
+                        <div *ngFor="let i of footer" class="list">
+                            <li >
+                                <i class="pi pi-whatsapp" style="font-size: 2rem;color: blue;"></i>
+                                 {{i}}
+                            </li>
+                        </div>
+                    </div> 
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

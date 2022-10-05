@@ -3,6 +3,7 @@ import { FormBuilder,Validators } from '@angular/forms';
 import { ConfirmationService, MessageService, PrimeNGConfig } from 'primeng/api';
 import { Message } from 'primeng/api';
 import { AppService } from '../app.service';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-login',

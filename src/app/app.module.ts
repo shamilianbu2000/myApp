@@ -47,6 +47,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService, MessageService} from 'primeng/api';
 import { TooltipModule } from 'primeng/tooltip';
 import {TabMenuModule} from 'primeng/tabmenu';
+import { LastComponent } from './last/last.component';
 
 const ngx:NgxUiLoaderConfig =
 {
@@ -104,6 +105,7 @@ const ngx:NgxUiLoaderConfig =
     FormComponent,
     ListuserComponent,
     LoginComponent,
+    LastComponent,
     
  
 

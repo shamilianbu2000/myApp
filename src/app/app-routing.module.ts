@@ -13,13 +13,29 @@ import { FormComponent } from './form/form.component';
 import { ListuserComponent } from './listuser/listuser.component';
 import { LoginComponent } from './login/login.component';
 import { AuthguardGuard } from './authguard.guard';
+import { LastComponent } from './last/last.component';
 
 const routes: Routes = [ {
   path : "",
-  // redirectTo : "adduser",
-  // pathMatch : "full"
-  component:LoginComponent
+  redirectTo : "adduser",
+  pathMatch : "full"
+  // component:LoginComponent
 },
+{
+
+    path : "list",
+    component : LoginComponent,
+  
+
+},
+{
+
+  path : "footer",
+  component : LastComponent,
+
+
+},
+
 {
   path : "adduser",
   component : FormComponent,

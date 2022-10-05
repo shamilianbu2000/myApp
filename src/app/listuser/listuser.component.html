@@ -61,7 +61,7 @@
 <ng-template pTemplate="body" let-user >
     <tr >
        <td>
-        <p-tableCheckbox [value]="usersList" ></p-tableCheckbox></td>
+        <p-tableCheckbox [(ngModel)]="user.checked" ></p-tableCheckbox></td>
         <td>{{user.name}}</td>
         <td>{{user.EMAIL}}</td>
         <td>{{user.msg}}</td>

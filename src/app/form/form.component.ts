@@ -63,7 +63,7 @@ export class FormComponent implements OnInit {
   
 
   addUser(){
-    console.log("----------->",this.forms);
+    console.log("----------->",this.userForm.value);
     this.appService.addUser(this.userForm.value).subscribe((data)=>{
       console.log(data);
       this.routes.navigate(['userlist'])

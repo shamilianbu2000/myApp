@@ -46,13 +46,20 @@
 
                 <div class="cards">
       
-                <p-card class="card">
+                <p-card  >
         
                 
                     <ng-template pTemplate="header" >
-                    {{i.name}}
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"> 
+                        <div style=" border-bottom: 1px solid;">
+                            {{i.name}}
+                        </div>
                     </ng-template>
-                    {{i.EMAIL}}
+                    <div style=" border-bottom: 1px solid;">
+                        {{i.EMAIL}}
+                    </div>
+
+                   
                     <ng-template pTemplate="footer">
                       {{i.msg}}
                     </ng-template>
@@ -77,7 +84,7 @@
 
  
 
-<p-sidebar [(visible)]="sidebar" position="right" [baseZIndex]="1000000" >
+<p-sidebar [(visible)]="sidebar" position="right" [baseZIndex]="1000000" [style]="{width:'30em'}" >
     
 
         <h5 id="head">LOGIN</h5>
@@ -87,7 +94,10 @@
             </div>
             <div id="username2-help" class="p-error block"  *ngIf = "username2.invalid && (username2.dirty || username2.touched)" style="color:red;">Username is not available
             </div>
-           
+        
+
+
+
         </div>
         
  

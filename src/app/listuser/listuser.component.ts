@@ -19,6 +19,7 @@ export class ListuserComponent implements OnInit {
   value:string='';
   issearch:boolean=true;
   data1:any;
+  user:any="";
 
   ngOnInit(): void {
 
@@ -29,8 +30,12 @@ export class ListuserComponent implements OnInit {
    userDetails(){
     this.appService.getUser().subscribe((data)=>{
       this.data = data
-      console.log("---------->",this.data.result[0]);
+      console.log("---------->",this.data.result);
       this.usersList = this.data.result
+      if(this.usersList == )
+      return this.usersList.filter(this.usersList => 
+      user.checked);
+  
       
     })
   }
