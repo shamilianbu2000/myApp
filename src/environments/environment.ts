@@ -5,7 +5,18 @@
 export const environment = {
   production: false,
   appurl:"http://localhost:8003/"
+
+
 };
+
+export const environments = {
+  production: false,
+  apiurl:"http://localhost:8004/"
+
+
+};
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

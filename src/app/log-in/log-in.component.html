@@ -1,0 +1,51 @@
+
+<div class="container-fluid">
+
+    <div class="row">
+
+   
+
+        <div class="col-6 login-part" >
+
+           
+            <div class="login">
+                <h3>login</h3>
+
+
+            <div class="input-box" [formGroup]="login">
+                <div class="form-grp">
+                    <p class="m-0" for="email">Email</p>
+                    <input type="email" id="email" formControlName="email" pInputText  />
+
+                    <div class="error-indicator"
+                        *ngIf="form['email'].invalid && (form['email'].dirty || form['email'].touched)">
+                        <span class="error-msg" *ngIf="form['email'].errors?.required">Email is required</span>
+                        <span class="error-msg" *ngIf="form['email'].errors?.pattern ">Email is invalid</span>
+                    </div>
+                </div>
+                <div class="form-grp">
+
+                    <p class="m-0" for="password">Password</p>
+                    <input type="password" id="password" formControlName="password" pInputText />
+
+                    <div class="error-indicator"
+                        *ngIf="form['password'].invalid && (form['password'].touched || form['password'].dirty)">
+                        <span class="error-msg" *ngIf="form['password'].errors?.required">Password is required</span>
+                        <span class="error-msg" *ngIf="form['password'].errors?.pattern">Password is invalid</span>
+                    </div>
+                </div>
+            </div>
+
+          
+
+            <button pButton class="logBtn" [disabled]="login.invalid && login.touched || isDisabled" type="button"
+            label="SUBMIT" (click)="log()"></button>
+
+            <p>forgetpassword<a routerLink="/forget"> clickit</a></p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<p-toast position="top-center"></p-toast>

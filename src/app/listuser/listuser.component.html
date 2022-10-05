@@ -27,7 +27,7 @@
  
 
  <p-table class="table" #dt [value]="usersList" responsiveLayout="scroll"  [rowHover]="true"
- [rows]="3" [showCurrentPageReport]="true"
+ [rows]="3" [showCurrentPageReport]="true" dataKey="Email"
  [filterDelay]="0" [globalFilterFields]="['name','Email','Message','action']"
  [paginator]="true" currentPageReportTemplate= "Showing {first} to {last} of {totalRecords} entries"
  >
@@ -53,15 +53,15 @@
 
         <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
 
-        <th pSortableColumn="name">Email<p-sortIcon field="name"></p-sortIcon> </th>
-        <th pSortableColumn="name">Message<p-sortIcon field="name"></p-sortIcon></th>
+        <th pSortableColumn="name">Email<p-sortIcon field="EMAIL"></p-sortIcon> </th>
+        <th pSortableColumn="name">Message<p-sortIcon field="msg"></p-sortIcon></th>
         <th pSortableColumn="name">ACTION<p-sortIcon field="name"></p-sortIcon></th>
     </tr>
 </ng-template> 
 <ng-template pTemplate="body" let-user >
     <tr >
        <td>
-        <p-tableCheckbox [(ngModel)]="user.checked" ></p-tableCheckbox></td>
+        <p-tableCheckbox ></p-tableCheckbox></td>
         <td>{{user.name}}</td>
         <td>{{user.EMAIL}}</td>
         <td>{{user.msg}}</td>

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   "Lower case letters (a-z)" +
   "Upper case letters (A-Z)" +
   "Numbers (i.e. 0-9)";
-  
+  value3:string='';
 
   constructor(private form:FormBuilder,private msgservice:MessageService,private confirmation:ConfirmationService,private appService:AppService,private primengConfig: PrimeNGConfig ) { }
 

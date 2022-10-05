@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { environments } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class AppService {
 //     return this.client.post('http://localhost:3000/users',{'id':775})
 //  }
 
-addUser(name:{name:string;email:string;msg:string}){
+addUser(name:{name:string;mail:string;msg:string}){
   return this.client.post(environment.appurl+"sql",name);
 
 }
@@ -34,4 +35,11 @@ delete(id:number){
   return this.client.delete(environment.appurl+"delete?id="+id);
 }
 
+signup(name:{email:string;password:string}){
+  return this.client.post(environments.apiurl+"signup",name);
+  
+}
+loign(login: object) {
+  return this.client.post("http://localhost:8004/login", { login })
+}
 }

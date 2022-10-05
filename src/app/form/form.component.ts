@@ -26,9 +26,9 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
 
     this.userForm = this.form.group({
-      name : [null, [Validators.required, Validators.minLength(4),Validators.maxLength(19),Validators.pattern('[a-zA-Z0-9]*)')]],
-      Email : [null, [Validators.required, Validators.email,Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,10}$')]], //formbuilder
-      contact : [null,[Validators.required,Validators.pattern('[0-9]{10}')]]
+      name : [null, [Validators.required, Validators.minLength(4),Validators.maxLength(19)]],
+      Email : [null, [Validators.required, Validators.email]], //formbuilder
+      msg : [null,[Validators.required]]
     })
 
     //  this.userForm = this.form.group({

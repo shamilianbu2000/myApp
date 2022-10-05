@@ -48,6 +48,12 @@ import {ConfirmationService, MessageService} from 'primeng/api';
 import { TooltipModule } from 'primeng/tooltip';
 import {TabMenuModule} from 'primeng/tabmenu';
 import { LastComponent } from './last/last.component';
+import { SignupComponent } from './signup/signup.component';
+import { LogInComponent } from './log-in/log-in.component';
+
+
+import {PasswordModule} from 'primeng/password';
+import { TableComponent } from './table/table.component';
 
 const ngx:NgxUiLoaderConfig =
 {
@@ -106,6 +112,10 @@ const ngx:NgxUiLoaderConfig =
     ListuserComponent,
     LoginComponent,
     LastComponent,
+    SignupComponent,
+    LogInComponent,
+    TableComponent,
+    
     
  
 
@@ -135,7 +145,9 @@ const ngx:NgxUiLoaderConfig =
     SidebarModule,
     NgxUiLoaderModule.forRoot(ngx),
     NgxUiLoaderHttpModule.forRoot({showForeground:true}),
-    TabMenuModule
+    TabMenuModule,
+    PasswordModule,
+  
     
   ],
   

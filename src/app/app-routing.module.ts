@@ -14,6 +14,10 @@ import { ListuserComponent } from './listuser/listuser.component';
 import { LoginComponent } from './login/login.component';
 import { AuthguardGuard } from './authguard.guard';
 import { LastComponent } from './last/last.component';
+import { SignupComponent } from './signup/signup.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { TableComponent } from './table/table.component';
+
 
 const routes: Routes = [ {
   path : "",
@@ -29,6 +33,14 @@ const routes: Routes = [ {
 
 },
 {
+  path:'signup',
+  component:SignupComponent
+},
+{
+  path:'log-in',
+  component:LogInComponent
+},
+{
 
   path : "footer",
   component : LastComponent,
@@ -40,6 +52,11 @@ const routes: Routes = [ {
   path : "adduser",
   component : FormComponent,
   // canActivate:[AuthguardGuard]
+},
+{
+  path : "table",
+  component : TableComponent,
+
 },
 {
   path : "userlist",
@@ -92,7 +109,6 @@ const routes: Routes = [ {
   loadChildren:()=>import('./module/module.module').then(m=>m.ModuleModule
   )
 },
-
 
 {
   path: '**',
