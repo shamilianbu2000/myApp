@@ -56,6 +56,12 @@ const routes: Routes = [ {
 {
   path : "table",
   component : TableComponent,
+  children:[
+    {
+      path: ":userid",
+      component:TableComponent
+    }
+  ]
 
 },
 {
@@ -86,9 +92,6 @@ const routes: Routes = [ {
     
          
       }]
-
-     
-
 }, {
   path: 'aboutus',
   component: AboutusComponent,

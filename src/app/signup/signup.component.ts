@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
 
   
 
-  value:string='';
+  value:string=''
   signUp:any;
   isDisabled:boolean=false;
   constructor(private appService:AppService,private messageService:MessageService) {}

@@ -70,12 +70,14 @@
 
           <div>
 
-            <p-confirmDialog header="Confirmation" [baseZIndex]="10000" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+            <!-- <p-confirmDialog header="Confirmation" [baseZIndex]="10000" icon="pi pi-arrow-right" [ngStyle]= "{'color':'red','font-size': '2rem'}"></p-confirmDialog> -->
 
-            <button (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button>
+            <button (click)="confirm()" pButton icon="pi pi-check" label="Confirm" [ngStyle]="" ></button>
+
+            <button (click)="addSingle()">click</button>
           </div>
                               
-<p-toast position="center" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+<p-toast position="center" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}" id="toast" [preventDuplicates]="true" [style]="{'font-size':'20px','width':'500px'}"></p-toast>
          </div>
     
         </div>
@@ -106,14 +108,12 @@
 <button pButton type="button" label="Small" icon="pi-arrow-right" (click)="sidebar = true" ></button>
              
 
- <p-confirmDialog #cd [style]="{width: '50vw'}">
-    <ng-template pTemplate="header">
-        <h3>Header Content</h3>
-    </ng-template>
+ <p-confirmDialog  class="hi" header="Confirmation" #cd   [baseZIndex]="10000" >
+    
     <ng-template pTemplate="footer">
-        <button type="button" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
-        <button type="button" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
-        <!-- <p-button type="button" class="mr-2" (click)="visibleSidebar2 = true" icon="pi pi-arrow-right"></p-button> -->
+        <button type="button" pButton icon="pi pi-times" label="No" [style] = "{'background-color': 'red'}"   (click)="cd.reject()"></button>
+        <button type="button" pButton icon="pi pi-check" label="Yes" [style] = "{'background-color': 'green'}"  (click)="cd.accept()"></button>
+         <!-- <p-button type="button" class="mr-2" (click)="visibleSidebar2 = true" icon="pi pi-arrow-right"></p-button> -->
     </ng-template>
 </p-confirmDialog> 
 

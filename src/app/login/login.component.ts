@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   "Upper case letters (A-Z)" +
   "Numbers (i.e. 0-9)";
   value3:string='';
+  hi: string='';
 
   constructor(private form:FormBuilder,private msgservice:MessageService,private confirmation:ConfirmationService,private appService:AppService,private primengConfig: PrimeNGConfig ) { }
 
@@ -99,8 +100,10 @@ confirm() {
   this.confirmation.confirm({
       message: 'Are you sure that you want to perform this action?',
       accept: () => {
-          
-      },reject:()=>{} 
+          console.log('hi')
+      },reject:()=>{
+        
+      } 
        });
 }
 
