@@ -17,7 +17,7 @@ export class TableComponent implements OnInit {
   issearch:boolean=true;
   selectedUsers:any
   user:any="";
-
+  isCheck!:boolean;
 
 
 
@@ -47,7 +47,23 @@ export class TableComponent implements OnInit {
         
       })
     }
+
+filterGlobal(data1:any){
+  console.log('okkk',data1.target.value);
+  var find = data1.target.value
+  if(find != null){
+    this.appService.getUser().subscribe((result)=>{
+      this.data = result
+      console.log("------------>",this.data.result);
+   
+    })
+    
+    }
+ }
+
+
+search(user:any){
+  console.log(user);
+  this.router.navigate(['table',user])
 }
-
-
-
+}
