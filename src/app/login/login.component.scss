@@ -34,17 +34,12 @@
 
     
 
-    .p-confirm-dialog-message{
-           
-        }
 
-    .p-confirm-dialog-message ng-tns-c104-2{
-        width: 50vw;
-        color:red;
-        font-size: 2rem;
-
+  
+    p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+        margin-left: 1rem;
+        color: red;
     }
-    
     
 
 

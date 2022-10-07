@@ -158,4 +158,13 @@
 
         <button *ngIf="isUpdate" (click)="update()">Submit</button>
     </form>
+
+ <p-confirmDialog  class="hi" header="Confirmation" #cd   [baseZIndex]="10000" >
+    
+    <ng-template pTemplate="footer">
+        <button type="button" pButton icon="pi pi-times" label="No" [style] = "{'background-color': 'red'}"   (click)="cd.reject()"></button>
+        <button type="button" pButton icon="pi pi-check" label="Yes" [style] = "{'background-color': 'green'}"  (click)="cd.accept()"></button>
+         <!-- <p-button type="button" class="mr-2" (click)="visibleSidebar2 = true" icon="pi pi-arrow-right"></p-button> -->
+    </ng-template>
+</p-confirmDialog> 
 </div> 

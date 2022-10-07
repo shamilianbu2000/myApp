@@ -1,4 +1,5 @@
-<p-table [columns]="cols" [value]="usersList" selectionMode="multiple" [(selection)]="selectedUsers" dataKey="name" [rowHover]="true"  responsiveLayout="scroll"
+
+<p-table   [columns]="cols" [value]="usersList" selectionMode="multiple" [(selection)]="selectedUsers" dataKey="name" [rowHover]="true"  responsiveLayout="scroll"
 [globalFilterFields]="['name','EMAIL','msg']"
 [rows]="3" [showCurrentPageReport]="true" 
 [paginator]="true" currentPageReportTemplate= "Showing {first} to {last} of {totalRecords} entries"
@@ -10,20 +11,20 @@
         List of Customers
         <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
-            <input pInputText type="text" (keyup)="search($event)" placeholder="Global Search" >
+            <input pInputText type="text" (input)="filterGlobal($event)" placeholder="Global Search" >
         </span>
     </div>
 </ng-template>
-    <ng-template pTemplate="header" let-columns>
+    <ng-template pTemplate="header" class="hi" let-columns>
+
         <tr>
             <th style="width: 3rem">
                 <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                
             </th>
-            <th pSortableColumn="name" *ngFor="let col of columns">
+            <th pSortableColumn="{{col.field}}" *ngFor="let col of columns">
                 {{col.header}}
-                <p-sortIcon field="name"></p-sortIcon>
-                <p-columnFilter type="text" field="name" display="menu"></p-columnFilter>
+                <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                <p-columnFilter type="text" field="{{col.field}}" display="menu"></p-columnFilter>
 
                
             </th>
@@ -34,7 +35,7 @@
     <ng-template pTemplate="body" let-userData let-columns="columns">
         <tr>
             <td>
-                <p-tableCheckbox [value]="userData" (click)="event(userData.id)"></p-tableCheckbox>
+                <p-tableCheckbox [value]="userData" ></p-tableCheckbox>
             </td>
             <td *ngFor="let col of columns">
                 {{userData[col.field]}}
@@ -43,3 +44,7 @@
     </ng-template>
     
 </p-table>
+
+
+
+

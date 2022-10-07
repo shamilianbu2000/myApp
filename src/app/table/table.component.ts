@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
   selectedUsers:any
   user:any="";
   isCheck!:boolean;
-
+rowHover:boolean=false;
 
 
 
@@ -54,16 +54,22 @@ filterGlobal(data1:any){
   if(find != null){
     this.appService.getUser().subscribe((result)=>{
       this.data = result
-      console.log("------------>",this.data.result);
-   
+      console.log("------------>",this.data.result);   
     })
     
     }
  }
 
+ hover(){
+  this.rowHover=true;
 
-search(user:any){
-  console.log(user);
-  this.router.navigate(['table',user])
-}
+
+ }
+// search(value: any) {
+//   console.log(value);
+//   this.appService.searchList(value.target.value).subscribe((res: any) => {
+//     console.log(res);
+//     this.empsList = res;
+//   })
+// }
 }

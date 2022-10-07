@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms'; ///,FormControl,FormGroup
 import { ActivatedRoute, Router } from '@angular/router';
+import { ConfirmationService } from 'primeng/api';
 import { Subscriber } from 'rxjs';
 import { AppService } from '../app.service';
 
@@ -21,7 +22,7 @@ export class FormComponent implements OnInit {
   userMsg:any;
   isdisable:boolean=true;
 
-  constructor(private appService:AppService,private route:ActivatedRoute,private routes:Router,private form:FormBuilder) { }
+  constructor(private appService:AppService,private route:ActivatedRoute,private routes:Router,private form:FormBuilder,private confirmation:ConfirmationService) { }
 
   ngOnInit(): void {
 
@@ -101,9 +102,21 @@ export class FormComponent implements OnInit {
         
       }
       
-      this.addUser()
+      this.confirm()
 
     }
+
+confirm() {
+  this.confirmation.confirm({
+      message: 'Are you sure that you want to perform this action?',
+      accept: () => {
+        this.addUser();
+          console.log('hi')
+      },reject:()=>{
+        
+      } 
+       });
+}
   }
 
 

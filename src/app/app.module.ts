@@ -54,6 +54,9 @@ import { LogInComponent } from './log-in/log-in.component';
 
 import {PasswordModule} from 'primeng/password';
 import { TableComponent } from './table/table.component';
+import { TreeComponent } from './tree/tree.component';
+import {TreeTableModule} from 'primeng/treetable';
+import {TreeNode} from 'primeng/api';
 
 const ngx:NgxUiLoaderConfig =
 {
@@ -115,6 +118,7 @@ const ngx:NgxUiLoaderConfig =
     SignupComponent,
     LogInComponent,
     TableComponent,
+    TreeComponent,
     
     
  
@@ -147,6 +151,9 @@ const ngx:NgxUiLoaderConfig =
     NgxUiLoaderHttpModule.forRoot({showForeground:true}),
     TabMenuModule,
     PasswordModule,
+    TreeTableModule,
+  
+
   
     
   ],
